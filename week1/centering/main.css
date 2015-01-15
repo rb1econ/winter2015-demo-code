@@ -1,0 +1,136 @@
+/* HELPER STYLES */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* HORIZONTAL TECHNIQUES */
+
+/* MARGIN */
+.horizontal-margin {
+  background: #f0f;
+  
+  /* Margin auto requires a width */
+  width: 400px;
+  
+  /* top and bottom can be anything as long as
+  left and right are set to "auto" */
+  margin: auto;
+}
+
+/* INLINE */
+.inline-center {
+  /* parent item: needs text-align center */
+  text-align: center;
+}
+.inline-center li {
+  /* children (to be centered) should be
+  inline or inline-block */
+  display: inline;
+  
+  display: inline-block;
+  padding: 10px;
+  background: #f00;
+  margin: 10px;
+}
+
+
+/* VERTICAL TECHNIQUES */
+
+/* Line Height */
+.line-height {
+  height: 200px;
+  background: #0f0;
+  
+  /* line height should be the same as the container height */
+  line-height: 200px;
+}
+
+
+/* Table Centering */
+.table-center {
+  height: 200px;
+  background: #999;
+
+  /* container needs table display */
+  display: table;
+}
+.table-center-contents {
+  /* children will be treated as table cells
+  with vertical centering */
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
+/* CSS3 Centering */
+.css3-center {
+  height: 200px;
+  background: #592;
+  
+  /* container needs to be positioned */
+  position: relative;
+}
+.css3-center-contents {
+  /* child needs absolute */
+  position: absolute;
+  top: 50%;
+  
+  /* pull up by half the height of the child contents */
+  transform: translateY(-50%);
+}
+
+
+/* BOTH TECHNIQUES */
+
+/* Stretching */
+.stretching {
+  height: 200px;
+  background: #92f;
+  position: relative;
+}
+.stretching-contents {
+  background: #f29;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  
+  width: 300px;
+  height: 100px;
+  margin: auto;
+}
+
+/* Negative Margins */
+.negative-margins {
+  background: #28f;
+  height: 200px;
+  
+  position: relative;
+}
+.negative-margins-contents {
+  background: #f82;
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  width: 100px;
+  height: 100px;
+  
+  margin-top: -50px;
+  margin-left: -50px;
+}
+
+
+/* Uniform Padding */
+.padding {
+  background: #282;
+  
+  /* using a single padding value */
+  padding: 50px;
+}
+.padding-contents {
+  background: #989;
+}

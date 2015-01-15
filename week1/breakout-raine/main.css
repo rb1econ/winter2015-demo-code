@@ -1,0 +1,102 @@
+/*
+div/span
+
+positioning
+cascade/architecture
+selectors
+centering
+
+git
+*/
+
+<div class="feed highlighted-container">
+	<img src="..." class="icon">
+</div>
+
+.feed {
+	padding: 10px;
+	border: solid 1px gray;
+}
+
+/* OPTION 1 */
+.feed img {
+	border-radius: 10px;
+}
+
+/* OPTION 2 */
+.icon {
+	border-radius: 10px;
+}
+
+<ul class="tags">
+	<li>Item 1</li>
+	<li>Item 2</li>
+	<li>Item 3</li>
+</ul>
+
+.tags
+
+.tags li
+
+.list-item
+
+
+/* 
+display
+position
+float
+*/
+
+display: block|inline|inline-block
+
+inline-block: sized as if it's block, positioned as if it's inline
+
+text-align and vertical-align: inline, inline-block
+margin auto: 1 block element
+
+
+
+position: static|fixed|absolute|relative
+
+overlapping elements: fixed|absolute
+
+absolute = render the elements in its normal position, but remove it from the document flow so that it does not affect other elements that are rendered
+
+coordinates (top right bottom left) -> fixed|absolute|relative (*positioned)
+when added to an absolute element -> position the element in relation to its nearest *positioned* ancestor
+
+coordinates on position:fixed are in relation to the window
+coordinates on position:relative are in relation to itself (shifts the element over)
+
+.a {
+	position: absolute;
+	top: 10px;
+}
+
+.b {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.c {
+	position: relative;
+}
+
+/* EXAMPLE 1 */
+<div class="a"></div> /* positioned in relation to the document */
+
+/* EXAMPLE 2 */
+<div class="b">
+	<div class="a"></div> /* position in relation to b */
+</div>
+
+/* EXAMPLE 3 */
+<div class="c">
+	<div class="a"></div>/* position in relation to c */
+</div>
+<div class="c">
+	<div class="a"></div>/* position in relation to c */
+</div>
+
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Positioning</title>
+    <style type="text/css">
+      /* Use the new box model */
+      /* Word of Caution: this is a SLOW selector, use sparingly */
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Base styles for the demo box */
+      .box {
+        margin: 20px;
+        padding: 20px;
+        border: 5px solid #000;
+        background: #f00;
+      }
+
+      /* Custom styles for a specific box */
+      .box-alt {
+        background: #00f;
+        
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 0;
+        width: 100%;
+      }
+
+      .box-alt2 {
+        background: #0f0;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa sunt eos, unde praesentium officiis! Aut officia delectus quam ut eveniet modi unde rerum at non voluptate, ipsam totam repellendus reiciendis?
+    </div>
+
+    <div class="box">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa sunt eos, unde praesentium officiis! Aut officia delectus quam ut eveniet modi unde rerum at non voluptate, ipsam totam repellendus reiciendis?
+
+      <div class="box box-alt">
+        Here is a smaller child box
+
+        <div class="box box-alt2">
+          Here is an even smaller box
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa sunt eos, unde praesentium officiis! Aut officia delectus quam ut eveniet modi unde rerum at non voluptate, ipsam totam repellendus reiciendis?
+    </div>
+
+    <div class="box">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa sunt eos, unde praesentium officiis! Aut officia delectus quam ut eveniet modi unde rerum at non voluptate, ipsam totam repellendus reiciendis?
+    </div>
+  </body>
+</html>

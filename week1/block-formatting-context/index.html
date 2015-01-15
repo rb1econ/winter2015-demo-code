@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Block Formatting Context</title>
+    <style type="text/css">
+      /* Use the new box model */
+      /* Word of Caution: this is a SLOW selector, use sparingly */
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Base styles for the demo box */
+      .box {
+        margin: 20px;
+        padding: 20px;
+        border: 5px solid #000;
+        background: #f00;
+        
+        float: left;
+      }
+
+      .box-right {
+        float: right;
+      }
+
+      .contents {
+        overflow: hidden;
+        background: peachpuff;
+      }
+
+
+      /* Style the navigation */
+      nav {
+        background: #333;
+        color: #fff;
+        /* Force the nav to contain the floated content */
+        overflow: hidden;
+      }
+      
+      nav ul {
+        /* Disable bullet icons on this list */
+        list-style-type: none;
+
+        /* Clear the browser defaults */
+        padding: 0;
+        margin: 0;
+      }
+      
+      /* Side-by-side nav items */
+      nav li {
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>Nav Item 1</li>
+        <li>Nav Item 2</li>
+        <li>Nav Item 3</li>
+      </ul>  
+    </nav>
+
+    <div class="box">
+      I am a floated box
+    </div>
+
+    <div class="box box-right">
+      I am a floated box
+    </div>
+
+    <div class="contents">
+      <h1>This is a header</h1>
+      <h1>This is a header2</h1>
+
+      Box 2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa sunt eos, unde praesentium officiis! Aut officia delectus quam ut eveniet modi unde rerum at non voluptate, ipsam totam repellendus reiciendis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis necessitatibus voluptate omnis, soluta fugit. Officia incidunt vitae, magnam, molestias, tempore ab repellendus nam animi beatae omnis, harum deserunt repudiandae eveniet. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quo, eaque recusandae, minima vero explicabo, ipsam nesciunt rem totam eius magni deserunt architecto ad alias autem omnis consequatur perferendis odit!
+    </div>
+  </body>
+</html>

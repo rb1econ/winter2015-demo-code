@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Box Model</title>
+    <style type="text/css">
+      /* Use the new box model */
+      /* Word of Caution: this is a SLOW selector, use sparingly */
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Base styles for the demo box */
+      .box {
+        margin: 20px;
+        padding: 20px;
+        border: 5px solid #000;
+        background: #f00;
+        
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa sunt eos, unde praesentium officiis! Aut officia delectus quam ut eveniet modi unde rerum at non voluptate, ipsam totam repellendus reiciendis?
+    </div>
+  </body>
+</html>
