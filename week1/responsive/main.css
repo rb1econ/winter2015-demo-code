@@ -1,0 +1,78 @@
+/* Use the border-box model so that width
+stays solid and doesn't include padding or border */
+* {
+  box-sizing: border-box;
+}
+
+/* Define a 2-column layout using float and percentage width */
+.box {
+  background: #999;
+  border: 1px solid black;
+  padding: 20px;
+  
+  float: left;
+  
+  /* Percentages allow us to not have to hard-code (pre-calculate)
+  widths, so we hand calculations off to the browser */
+  width: 50%;
+}
+
+
+/* Example of our core page container. It should
+be responsive, but never get larger than a given size. */
+.container {
+  background: #f0f;
+  border: 1px solid green;
+  padding: 20px;
+  
+  /* Just clear the floated columns above */
+  clear: left;
+  
+  /* Max width tells the browser to never allow this element
+  to get any wider than the given value. Anything less will
+  fill to 100% width */
+  max-width: 500px;
+  
+  /* Allow the content to center */
+  margin: auto;
+}
+
+
+.header-small {
+  /* this can be found in a header element.
+  If it's inside an H1, which has a default font-size
+  of 2ems (200% of the body font-size), then this will
+  be 1/2 of that */
+  
+  font-size: 0.5em;
+  
+  /* use rem to be relative to the root font size (on body),
+  which will not inherit from parents like em will */
+  /* font-size: 1.5rem; */
+}
+
+/* These rule sets will only apply if the
+media query is matched. This will only happen
+on screens that have a display width of at least
+650 pixels wide. */
+@media screen and (min-width: 650px){
+  /* These rule-sets will only apply if the media-query is matched */
+  .container {
+    max-width: 650px;
+  }
+  .box {
+    background: peachpuff;
+  }
+}
+
+/* Media queries do not add any weight to specificity,
+so as usual, order and our own calculated specificity
+are what the browsers use. If the screen size is 900px wide,
+the following query will activate, overriding all previous
+rules targetting .container as long as they have the same
+specificity. */
+@media screen and (min-width: 850px){
+  .container {
+    max-width: 850px;
+  }
+}
