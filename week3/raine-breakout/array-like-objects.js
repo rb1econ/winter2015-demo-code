@@ -46,7 +46,6 @@ $ function has 3 main behaviors:
 
 /*
 event bubbling, event delegation
-map, filter, reduce
 functional programming
 
 testing/debugging events/jQuery, using developer tools
