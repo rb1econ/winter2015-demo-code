@@ -1,0 +1,21 @@
+Phase 1:
+ ✔ Animate truck from base to target delivery @done (15-02-03 10:31)
+ ☐ Home base needs to decide which truck to send
+
+
+Future:
+ ☐ Make money off this?
+
+＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
+Archive:
+ ✔ Implement a home-base class @done (15-02-03 09:20) @project(Phase 1)
+ ✔ Implement a delivery truck class @done (15-02-03 09:20) @project(Phase 1)
+ ✔ Implement a home class @done (15-02-03 09:20) @project(Phase 1)
+ ✔ Create test instances of each @done (15-02-03 09:20) @project(Phase 1)
+ ✔ Targets have a list of packages received @done (15-02-03 09:22) @project(Phase 1)
+ ✔ Create a package class @done (15-02-03 09:23) @project(Phase 1)
+ ✔ Implement a "deliver" method on home base that will "send" a package to a target @done (15-02-03 09:39) @project(Phase 1)
+ ✔ Implement rendering method for homebase @done (15-02-03 09:47) @project(Phase 1)
+ ✔ Implement rendering for targets @done (15-02-03 09:58) @project(Phase 1)
+ ✔ Implement rendering for trucks @done (15-02-03 10:05) @project(Phase 1)
+ ✔ Update home base to have an Add Truck method (which will position the truck on the base) @done (15-02-03 10:10) @project(Phase 1)
