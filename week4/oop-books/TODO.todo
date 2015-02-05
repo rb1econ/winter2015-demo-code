@@ -1,0 +1,30 @@
+Phase 1:
+ ☐ Rate books (using a star system)
+
+Rating System:
+ ☐ Changing visuals on rating set
+
+Cool stuff:
+ ☐ Delete books
+ ☐ Add new books via a form
+ ☐ When adding a book, re-render the library (update the book list)
+ ☐ Display stats about libraries
+ ☐ Picking an author to see all books
+ ☐ Undo last action
+
+＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
+Archive:
+ ✔ Create book template in HTML @done (15-02-05 09:22) @project(Phase 1)
+ ✔ Create library template in HTML @done (15-02-05 09:23) @project(Phase 1)
+ ✔ Render a book @done (15-02-05 09:27) @project(Phase 1)
+ ✔ Hook up instance data to template @done (15-02-05 09:31) @project(Phase 1)
+ ✔ Render a library @done (15-02-05 09:41) @project(Phase 1)
+ ✔ Ability to handle multiple libraries (test) @done (15-02-05 09:53) @project(Phase 1)
+ ✔ Ability to add multiple books in one function call @done (15-02-05 10:00) @project(Phase 1)
+ ✔ Mousing over stars shows target rating @done (15-02-05 10:11) @project(Rating System)
+ ✔ Changing visuals on mouse over @done (15-02-05 10:22) @project(Rating System)
+ ✔ Clicking star sets rating on book @done (15-02-05 10:35) @project(Rating System)
+ ✔ Test the library and book classes with temp data @done (15-02-05 09:19) @project(Phase 1)
+ ✔ Add book method for a library (for future control options) @done (15-02-05 09:19) @project(Phase 1)
+ ✔ Library class (contains a list of books) @done (15-02-05 09:10) @project(Phase 1)
+ ✔ Book class @done (15-02-05 09:10) @project(Phase 1)
