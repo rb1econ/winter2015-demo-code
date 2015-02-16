@@ -1,0 +1,10 @@
+{
+  "name": "node-npm",
+  "version": "1.0.0",
+  "description": "testing the npm manager system",
+  "main": "index.js",
+  "author": "irrationalistic",
+  "dependencies": {
+    "underscore": "^1.7.0"
+  }
+}
