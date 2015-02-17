@@ -1,0 +1,28 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset="utf-8")
+    title Express - Full
+    block head-scripts
+    include partials/header-includes
+
+  body
+    .navbar
+      .container
+        h1 Main Navigation
+
+    p.another-div
+
+    block content
+
+    block sidebar
+    
+    block foot-scripts
+
+    //- Order still matters here, so include jQuery before our main.js
+        We can also now skip out on adding the 'http' or 'https' because
+        the browser can infer those values from the actual url of the page.
+        It couldn't before because there was no such thing
+        as 'file:///cdnjs.cloudflare.com...'
+    script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+    script(src="/javascripts/main.js")

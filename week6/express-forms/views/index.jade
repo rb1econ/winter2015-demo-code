@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1 Hello Boulder!
+  
+  //- Form to submit:
+      Needs the action (where to submit the data to)
+      and the method (what verb to submit with [usually get or post])
+  form(action="/handleForm", method="post")
+    input(type="text", name="username", placeholder="Username...")
+    input(type="submit")
