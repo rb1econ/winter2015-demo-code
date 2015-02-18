@@ -1,0 +1,25 @@
+extends layout
+
+block content
+	//- if username
+	//- 	h1 Hello #{username}!
+	//- else
+	//- 	h1 Please log in
+	
+	ul
+		for student in students
+			li
+				a(href="/student/#{student.id}")
+					h3= student.name
+				if student.color == 'orange'
+					em= student.color
+				else
+					em Your color sucks
+	ul
+		for instructor in instructors
+			li
+				h3= instructor.name
+				if instructor.color == 'orange'
+					em= instructor.color
+				else
+					em Your color sucks
