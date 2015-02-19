@@ -1,0 +1,18 @@
+extends layout
+
+block content
+	h1 Best Movies of All Time
+	
+	h3 Add a Movie
+	form(action="/submitMovie", method="post")
+		input(type="text", name="title", placeholder="Title")
+		textarea(type="text", name="description", placeholder="Description")
+		input(type="text", name="year", placeholder="Year")
+		input(type="text", name="character", placeholder="Character")
+		label Was Choppa?
+			input(type="checkbox", name="wasChoppa")
+		input(type="submit")
+	
+	ul
+		for movie in movies
+			li: a(href="/view/#{movie.title}")= movie.title
