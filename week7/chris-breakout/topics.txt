@@ -1,0 +1,11 @@
+- big picture: where does node begin and end
+  - how is an anonymous function making things asynchronous
+- more DB interactions (not even scaffolded)
+- mongoose/mongo documentation
+- how to use mongo on heroku
+- difference between "set" and "use"
+- other cool npm packages
+
+
+
+?? vim stuff ??
