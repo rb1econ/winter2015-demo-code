@@ -1,0 +1,27 @@
+Features:
+  ✔ Database architecture for a list of Beers @done(2015-02-26 10:38) @project(Features)
+  ✔ Seed the database @done(2015-02-26 10:51) @project(Features)
+  ✔ Display the full list of beers on the homepage @done(2015-02-26 10:57) @project(Features)
+    ✔ Set up controller to pass list of beers to view @done(2015-02-26 10:55) @project(Features)
+    ✔ Update index view to loop/display each beer @done(2015-02-26 10:57) @project(Features)
+  ✔ Get in that bootstrap @done(2015-02-26 11:07) @project(Features)
+  ✔ Add a new beer from a form @done(2015-02-26 12:01) @project(Features)
+    ✔ Create the form @done(2015-02-26 11:07) @project(Features)
+    ✔ Add in jQuery @done(2015-02-26 11:14) @project(Features)
+    ✔ Set up a main.js and add event for form submission @done(2015-02-26 11:14) @project(Features)
+    ✔ Make an ajax call to server with new beer info @done(2015-02-26 11:25) @project(Features)
+    ✔ Server needs to send back newly created beer (save to DB) @done(2015-02-26 11:37) @project(Features)
+    ✔ Update list to include data from new beer @done(2015-02-26 12:01) @project(Features)
+  ✔ Delete a beer from the list @done(2015-02-26 12:31) @project(Features)
+    ✔ Add delete button to page @done(2015-02-26 12:04) @project(Features)
+    ✔ Setup click handler for button @done(2015-02-26 12:14) @project(Features)
+    ✔ Make ajax request to server to delete item @done(2015-02-26 12:22) @project(Features)
+    ✔ Once deleted, update DOM @done(2015-02-26 12:22) @project(Features)
+    ✔ Update the ajax add to support adding the class and ID structure @done(2015-02-26 12:30) @project(Features)
+  ☐ View an individual beer
+  ☐ Edit a beer
+  ☐ Rank a beer
+  ☐ Drink a beer(s)
+
+Features that would really set this app apart:
+  ☐ Form validation
