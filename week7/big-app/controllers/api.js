@@ -23,7 +23,21 @@ var apiController = {
       // Assume success here:
       res.send('success');
     });
+  },
+
+  getBeer: function(req, res){
+    // res.send(req.params.beer_id);
+    var beerId = req.params.beer_id;
+    // Find the given ID in the database
+    Beer.findById(beerId, function(err, result){
+      // console.log('Err:', err);
+      // console.log('Result:', result);
+      // ## ANY ERROR CHECKING GOES HERE
+      // Send the beer data right back to the requester
+      res.send(result);
+    });
   }
+
 };
 
 module.exports = apiController;

@@ -22,4 +22,21 @@ block content
 			li.beer(data-id="#{beer._id}")
 				strong= beer.name
 				| &nbsp;
+				a.view(href="#") view
+				|  - 
 				a.delete(href="#") delete
+
+
+	#view-modal.modal.fade
+		.modal-dialog
+			.modal-content
+				.modal-header
+					button.close(type="button", data-dismiss="modal")
+						span &times;
+					h4.modal-title View a Beer
+				.modal-body
+					h5.beer-name Beer Name
+					em.beer-abv ABV
+					p.beer-type Type
+					p.beer-brewer Brewer
+				

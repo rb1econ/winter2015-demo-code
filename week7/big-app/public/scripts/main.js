@@ -61,6 +61,24 @@ var beerDelete = function(e){
   });
 };
 
+var beerView = function(e){
+  e.preventDefault();
+
+  $('#view-modal').modal('show');
+
+  // get the details of the clicked beer
+  // from the server
+
+  var originalBeerElement = $(this).closest('.beer');
+  var targetId = originalBeerElement.attr('data-id');
+
+  $.get('/api/getBeer/' + targetId, function(dataFromServer){
+    $('#view-modal .beer-name').text(dataFromServer.name);
+    $('#view-modal .beer-abv').text(dataFromServer.ABV);
+    $('#view-modal .beer-type').text(dataFromServer.type);
+    $('#view-modal .beer-brewer').text(dataFromServer.brewer);
+  });
+};
 
 // Initialize the event listeners
 $(document).on('ready', function(){
@@ -72,5 +90,8 @@ $(document).on('ready', function(){
 
   // Handle deletion clicks
   $(document).on('click', '.delete', beerDelete);
+
+  // Handle view clicks
+  $(document).on('click', '.view', beerView);
 
 });
