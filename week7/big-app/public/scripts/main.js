@@ -80,6 +80,49 @@ var beerView = function(e){
   });
 };
 
+
+var beerEdit = function(e){
+  e.preventDefault();
+
+  $('#edit-modal').modal('show');
+
+  var originalBeerElement = $(this).closest('.beer');
+  var targetId = originalBeerElement.attr('data-id');
+
+  $.get('/api/getBeer/' + targetId, function(dataFromServer){
+    $('#edit-modal .beer-name').val(dataFromServer.name);
+    $('#edit-modal .beer-abv').val(dataFromServer.ABV);
+    $('#edit-modal .beer-type').val(dataFromServer.type);
+    $('#edit-modal .beer-brewer').val(dataFromServer.brewer);
+    $('#edit-modal .beer-id').val(dataFromServer._id);
+  });
+};
+
+var beerEditSubmit = function(e){
+  e.preventDefault();
+
+  var dataFromClient = {
+    name: $('#edit-modal .beer-name').val(),
+    ABV: $('#edit-modal .beer-abv').val(),
+    type: $('#edit-modal .beer-type').val(),
+    brewer: $('#edit-modal .beer-brewer').val()
+  };
+
+  var targetId = $('#edit-modal .beer-id').val();
+
+  $.post('/api/editBeer/' + targetId, dataFromClient, function(dataFromServer){
+    console.log(dataFromServer);
+
+    // Hide the modal in the end
+    $('#edit-modal').modal('hide');
+
+    // Update the on-page DOM element
+    $('[data-id="'+targetId+'"]')
+      .find('strong')
+      .text(dataFromServer.name);
+  });
+};
+
 // Initialize the event listeners
 $(document).on('ready', function(){
 
@@ -94,4 +137,9 @@ $(document).on('ready', function(){
   // Handle view clicks
   $(document).on('click', '.view', beerView);
 
+  // Handle edit clicks
+  $(document).on('click', '.edit', beerEdit);
+
+  // Handle submitting the edit form
+  $('#edit-form').on('submit', beerEditSubmit);
 });

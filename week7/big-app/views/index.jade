@@ -24,6 +24,8 @@ block content
 				| &nbsp;
 				a.view(href="#") view
 				|  - 
+				a.edit(href="#") edit
+				|  - 
 				a.delete(href="#") delete
 
 
@@ -39,4 +41,26 @@ block content
 					em.beer-abv ABV
 					p.beer-type Type
 					p.beer-brewer Brewer
-				
+					
+					
+	#edit-modal.modal.fade
+		.modal-dialog
+			.modal-content
+				.modal-header
+					button.close(type="button", data-dismiss="modal")
+						span &times;
+					h4.modal-title Edit a Beer
+				form#edit-form
+					input.beer-id(type="hidden")
+					.modal-body
+						.form-group
+							input.beer-name.form-control(type="text", placeholder="Beer Name...")
+						.form-group
+							input.beer-abv.form-control(type="number", step="any", placeholder="Beer ABV...")
+						.form-group
+							input.beer-type.form-control(type="text", placeholder="Beer Type...")
+						.form-group
+							input.beer-brewer.form-control(type="text", placeholder="Beer Brewer...")
+					
+					.modal-footer
+						input.btn.btn-primary(type="submit", value="Save Changes")

@@ -36,8 +36,19 @@ var apiController = {
       // Send the beer data right back to the requester
       res.send(result);
     });
-  }
+  },
 
+  editBeer: function(req, res){
+    // res.send({
+    //   targetId: req.params.beer_id,
+    //   targetUpdates: req.body
+    // });
+    var beerId = req.params.beer_id;
+    
+    Beer.findByIdAndUpdate(beerId, req.body, function(err, result){
+      res.send(result);
+    });
+  }
 };
 
 module.exports = apiController;

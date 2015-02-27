@@ -22,6 +22,7 @@ app.get('/', indexController.index);
 app.post('/api/addBeer', apiController.addBeer);
 app.post('/api/deleteBeer', apiController.deleteBeer);
 app.get('/api/getBeer/:beer_id', apiController.getBeer);
+app.post('/api/editBeer/:beer_id', apiController.editBeer);
 
 var server = app.listen(3148, function() {
 	console.log('Express server listening on port ' + server.address().port);
