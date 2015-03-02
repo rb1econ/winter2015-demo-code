@@ -1,0 +1,24 @@
+doctype html
+html(lang='en', ng-app="myModule")
+	head
+		meta(charset="utf-8")
+		title Angular Demo
+
+	body
+		h1 Angular Demo
+		
+		div(ng-controller="myController")
+			h1 Hello {{name | pigLatin}}
+			input(type="text", placeholder="Name...", ng-model="name")
+			p Hello, {{name}}, how's it going?
+			p User {{user.name}} likes {{user.color | pigLatin}}
+			p: button(ng-click="printName()") Print Name
+		
+		div(ng-controller="dataController")
+			p {{service.message | uppercase}}
+			p {{factory.message}}
+			
+		prime
+			
+		script(src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.js")
+		script(src="/demo/demo.js")
