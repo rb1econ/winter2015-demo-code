@@ -1,0 +1,19 @@
+extends layout
+
+block content
+	h1 Angular News
+	
+	div(ng-controller="newItemController")
+		form.form(ng-submit="addItem()")
+			.form-group
+				input.form-control(type="text", placeholder="Title...", ng-model="item.title")
+			.form-group
+				input.form-control(type="text", placeholder="URL...", ng-model="item.url")
+			.form-group
+				input.form-control(type="text", placeholder="Author...", ng-model="item.author")
+			.form-group
+				input.btn.btn-primary(type="submit", value="Save...")
+	
+	div(ng-controller="listController")
+		div.news-item(ng-repeat="item in news")
+			newsitem

@@ -1,0 +1,4 @@
+a(ng-href="{{item.url}}", ng-show="item.url"): h3 {{item.title}}
+span(ng-hide="item.url"): h3 {{item.title}}
+p {{item.content}}
+p: img(ng-src="{{item.imageUrl}}", ng-show="item.imageUrl", width=100)
