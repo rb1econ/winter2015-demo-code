@@ -1,13 +1,56 @@
 var assert = require("assert");
-var nextPrime = require('../routes/index').nextPrime;
+var nextPrime = require('../controllers/api').nextPrime;
+var Beer = require('../models/beer.js');
+var indexController = require('../controllers/index.js');
+var apiController = require('../controllers/api.js');
+var request = require('supertest')
+  , express = require('express');
+// var app = require('')
+process.env.NODE_ENV = 'test';
 
-describe('testing next Prime', function() {
-  it('nextPrime should return the next prime number', function() {
-    assert.equal(17, nextPrime(13));
+var app = require('../app');
+console.log('ENV:::: ', app.settings.env);
+
+var mongoose = require('mongoose');
+
+
+describe('GET /', function(){
+  before(function(done) {
+
+    var budweiser = new Beer({
+      name: 'Budweiser',
+      ABV: 5.5,
+      type: 'pilsner or lager who knows',
+      brewer: 'Inbev'
+    });
+    budweiser.save();
+    done();
   });
 
-  it('zero and one are not prime numbers', function() {
-    assert.equal(2, nextPrime(0));
-    assert.equal(2, nextPrime(1));
+  after(function(done) {
+    Beer.remove({});
+
+    mongoose.disconnect();
+
+    done();
+  });
+
+  it('respond with 200', function(done){
+    request(app)
+      .get('/')
+      .expect(200, done)
+      .expect('content-type', "text/html; charset=utf-8");
   });
 });
+
+
+// describe('testing beer api.js', function() {
+//   it('A beer should be found.', function() {
+//     assert.isDefined(apiController.getBeer, 'A beer was found (value is defined)');
+//   });
+
+//   it('addition thingy', function() {
+//     assert.be.equal.to(2+3, 5);
+//   });
+// });
+
