@@ -38,19 +38,8 @@ describe('GET /', function(){
   it('respond with 200', function(done){
     request(app)
       .get('/')
-      .expect(200, done)
+      .expect(200, done)  
+      .expect().to.include('Budweiser')
       .expect('content-type', "text/html; charset=utf-8");
   });
 });
-
-
-// describe('testing beer api.js', function() {
-//   it('A beer should be found.', function() {
-//     assert.isDefined(apiController.getBeer, 'A beer was found (value is defined)');
-//   });
-
-//   it('addition thingy', function() {
-//     assert.be.equal.to(2+3, 5);
-//   });
-// });
-
