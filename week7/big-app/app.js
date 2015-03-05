@@ -16,6 +16,7 @@ app.set('dbURL', config.db[app.settings.env]);
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 mongoose.connect(app.get('dbURL'));
 

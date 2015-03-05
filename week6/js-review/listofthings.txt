@@ -1,7 +1,0 @@
-- functions (params, arguments)
-  - return (when, what does it do)
-    - diff between return and console.log
-- create variables (in terms of where)
-- dom creation (jquery)
-- _find to get a [array of objs, city: 'seville', next: 'canary']
-- css float vs inline block

@@ -1,6 +1,0 @@
-- why or when jade
-- app.js > jade question mark
-- jade syntax things
-  - extending
-- demo more complicated jade
-- order of routing in express
